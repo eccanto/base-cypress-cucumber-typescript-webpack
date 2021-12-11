@@ -31,11 +31,11 @@
   },
   "license": "MIT",
   "dependencies": {
-    "cypress": "^9.0.0",
+    "cypress": "^9.1.1",
+    "cypress-cucumber-preprocessor": "git://github.com/rakhmanoff/cypress-cucumber-preprocessor#v4.3.0-patch",
     "ts-loader": "^9.2.6",
-    "typescript": "^4.5.2",
-    "webpack": "^5.64.1",
-    "cypress-cucumber-preprocessor": "git://github.com/rakhmanoff/cypress-cucumber-preprocessor#v4.3.0-patch"
+    "typescript": "^4.5.3",
+    "webpack": "^5.64.1"
   },
   "devDependencies": {
     "@cypress/browserify-preprocessor": "^3.0.2",
@@ -52,7 +52,8 @@
     "eslint-plugin-promise": "^5.1.1"
   },
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true,
+    "nonGlobalStepDefinitions": false,
+    "step_definitions": "cypress/integration/step_definitions/",
     "cucumberJson": {
       "generate": true,
       "outputFolder": "cypress/cucumber-json",
